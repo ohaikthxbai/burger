@@ -3,7 +3,7 @@ CREATE DATABASE burger_db;
 USE burger_db;
 
 CREATE TABLE burger (
-    id int not null auto_incremen,
+    id int not null auto_increment,
     burger_name varchar(255) not null,
     devoured boolean not null,
     date timestamp not null, 
