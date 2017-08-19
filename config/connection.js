@@ -3,7 +3,7 @@ var mysql = require("mysql");
 
 // defining the connection variable to connect to the db
 var connection = mysql.createConnection({
-    host: "127.0.0.1",
+    host: "localhost",
     user: "root",
     password: "root",
     database: "burger_db"
