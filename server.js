@@ -22,12 +22,12 @@ app.use(methodOverride("_method"));
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set("view engine", "handlebars");
 
- var routes = require("./controllers/burgers_controller.js");
- app.use("/", routes);
+var routes = require("./controllers/burgers_controller.js");
+app.use("/", routes);
 
- app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, './public')));
 
 // port listener (hopefully no errors!)
-app.listen(PORT, function() {
-  console.log("Listening on PORT " + PORT);
+app.listen(PORT, function () {
+    console.log("Listening on PORT " + PORT);
 });
