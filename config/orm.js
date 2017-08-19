@@ -6,6 +6,7 @@ var orm = {
     // method creation
     // displaying all the data from the table
     selectAll: function (tableInput, callback) {
+        // sql commands
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function (error, result) {
             if (error) {
@@ -25,7 +26,7 @@ var orm = {
         });
     },
     // update the table when the user devours the burger
-    updateOne: function (table, objColVals, condition, callback) {
+    updateOne: function (table, columnValue, condition, callback) {
         var queryString = "UPDATE  " + table + " SET devoured =  1 WHERE " + condition + ";";
         connection.query(queryString, function (error, result) {
             if (error) {

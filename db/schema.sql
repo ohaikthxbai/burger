@@ -5,7 +5,7 @@ USE burger_db;
 CREATE TABLE burger (
     id int not null auto_increment,
     burger_name varchar(255) not null,
-    devoured boolean not null,
+    devoured boolean not null default 0,
     date timestamp not null, 
     primary key(id)
 )
