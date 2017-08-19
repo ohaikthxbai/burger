@@ -9,8 +9,8 @@ var burger = {
         });
     },
     // inserting the burger into the database
-    insertOne: function (column, value, callback) {
-        orm.insertOne("burgers", column, value, function (results) {
+    newBurger: function (column, value, callback) {
+        orm.newBurger("burgers", column, value, function (results) {
             callback(results);
         });
     },
