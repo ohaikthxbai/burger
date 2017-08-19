@@ -3,10 +3,11 @@ var mysql = require("mysql");
 
 // defining the connection variable to connect to the db
 var connection = mysql.createConnection({
-    host: "us-cdbr-iron-east-05.cleardb.net",
-    user: "bd6f144771f99c",
-    password: "a39feb914d51c46",
-    database: "heroku_0963053b264e1d8"
+    host: "localhost",
+    user: "root",
+    password: "root",
+    port: 8889,
+    database: "burger_db"
 });
 
 // connecting...
