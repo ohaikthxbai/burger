@@ -1,6 +1,10 @@
 body {
     background-color: rgb(244, 238, 219);
 }
+.custom-font {
+    font-family: 'Salsa', cursive;
+    letter-spacing: 2px;
+}
 
 .burger-pic {
     border: solid 10px rgb(53, 177, 44);
@@ -11,5 +15,32 @@ body {
 }
 
 #title-text {
+    font-family: 'Salsa', cursive;
+    letter-spacing: 2px;
     margin-top: 20px;
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+h6 {
+    margin-bottom: 20px;
+}
+
+#burger-entry {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#label {
+    margin-bottom: 10px;
+}
+
+h3 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+ul {
+    text-align: left;
+    list-style-type: none;
 }

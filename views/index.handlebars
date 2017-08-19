@@ -1,0 +1,37 @@
+<div class="row">
+    <div id="burger-entry" class="col-lg-12">
+        <form action="/" method="POST">
+            <input type="text" id="label" name="burger_name" placeholder="Burger Entry">
+            <br>
+            <button class="btn btn-success" type="submit">Add Burger &raquo;</button>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+        <h3 class="custom-font">Uneaten</h3>
+        <ul>
+            {{#each burgers}} {{#unless this.devoured}}
+            <li>
+                {{this.burger_name}}
+                <form action="/{{this.id}}?_method=PUT" method="POST">
+                    <input type="hidden" name="devoured" value="1"><button class="btn btn-warning" type="submit">Eat Dat!</button>
+                </form>
+            </li><br> {{/unless}} {{/each}}
+        </ul>
+    </div>
+
+    <div class="col-md-3">
+        <h3 class="custom-font">Devoured</h3>
+        <ul>
+            {{#each burgers}} {{#if this.devoured}}
+            <li>
+                {{this.burger_name}}
+            </li>
+            {{/if}} {{/each}}
+        </ul>
+    </div>
+    <div class="col-md-3"></div>
+</div>

@@ -16,8 +16,8 @@ var orm = {
         });
     },
     // inserting the burger into the table
-    insertOne: function (table, column, value, callback) {
-        var queryString = "INSERT INTO " + table + " (" + column + ", devoured, date) VALUES ( '" + value + "' , 0 , curdate() );";
+    newBurger: function (table, column, value, callback) {
+        var queryString = "INSERT INTO " + table + " (" + column + ", devoured, date) VALUES ( '" + value + "' , 0 , now() );";
         connection.query(queryString, value, function (error, result) {
             if (error) {
                 throw error;
@@ -26,7 +26,7 @@ var orm = {
         });
     },
     // update the table when the user devours the burger
-    updateOne: function (table, columnValue, condition, callback) {
+    burgerEaten: function (table, columnValue, condition, callback) {
         var queryString = "UPDATE  " + table + " SET devoured =  1 WHERE " + condition + ";";
         connection.query(queryString, function (error, result) {
             if (error) {
